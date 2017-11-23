@@ -41,7 +41,7 @@ endif %?INSTALL%
 	  $(EMACS) --batch \
 	    $(AM_ELCFLAGS) $(ELCFLAGS) \
 	    $$am__subdir_includes -L $(builddir) -L $(srcdir) \
-	    --eval "(defun byte-compile-dest-file (f) \"$@\")" \
+	    --eval "(setq byte-compile-dest-file-function (lambda (_) \"$@\"))" \
 	    --eval "(unless (byte-compile-file \"$<\") (kill-emacs 1))"; \
 	else :; fi
 
