@@ -64,6 +64,11 @@
 
 New in ?.?.?:
 
+* New features added
+
+  - the `zstd' compression scheme and associate automake option `dist-zstd'
+    are added.
+
 * Miscellaneous changes
 
   - automake no longer requires a @setfilename in each .texi file

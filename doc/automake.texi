@@ -8750,6 +8750,13 @@ It and the corresponding functionality will be removed altogether
 in Automake 2.0.
 @trindex dist-shar
 
+@vindex ZSTD_OPT
+@item @code{dist-zstd}
+Generate an @samp{zstd} tar archive of the distribution.  By default, this
+rule makes @samp{zstd} use a compression option of @option{--ultra -22}.  To
+make it use a different one, set the @env{ZSTD_OPT} environment variable.
+@trindex dist-zstd
+
 @end table
 
 The rule @code{dist} (and its historical synonym @code{dist-all})
